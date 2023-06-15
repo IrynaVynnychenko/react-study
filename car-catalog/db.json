@@ -1,0 +1,40 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Toyota Camry",
+      "price": 24970,
+      "image": "/images/toyota-camry.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Lexus 350",
+      "price": 30000,
+      "image": "/images/lexus-350.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Lanos",
+      "price": 3800,
+      "image": "/image/lanos.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "VW Jetta",
+      "price": 8000,
+      "image": "/images/vw-jetta.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Audi Q5",
+      "price": 18000,
+      "image": "/images/audi-q5.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "BMW X1",
+      "price": 18000,
+      "image": "/images/bmw-x1.jpeg"
+    }
+  ]
+}

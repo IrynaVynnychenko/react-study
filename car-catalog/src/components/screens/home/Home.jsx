@@ -1,6 +1,12 @@
-import styles from './Home.module.scss'
+import { useMemo } from 'react';
+import CarItem from './car-item/CarItem'
+import {cars} from './cars.data.js'
 
 function Home() {
+
+  const filteredCars = useMemo(() => 
+    cars.filter(car => car.price > 20000), []
+  );
 
   return (
     <>
@@ -9,16 +15,11 @@ function Home() {
           Cars catalog
         </h1>
         <div className='wrapper-cards'>
-          <div className={styles.item}>
-            <div className={styles.itemImage}>
-              <img src='/car1.png' alt="" />
-            </div>
-            <div className={styles.itemInfo}>
-              <h2>Car1</h2>
-              <p>$100 000</p>
-              <button>Read more</button>
-            </div>
-          </div>
+          {filteredCars.length ? filteredCars.map(car => (
+            <CarItem key={car.id} car={car}/>
+          ))
+           : <p className='wrapper-cards__empty'>There is no cars</p>
+        }
         </div>
       </div>
     </>

@@ -9,16 +9,47 @@
   color: #333;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media(max-width: 991px) {
+    max-width: 100%;
+  }
 }
 
 .itemImage {
   max-width: 100%;
-  height: 140px;
+  height: 160px;
+
+  @media(max-width: 991px) {
+    height: 200px;
+  }
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
+    border-radius: 6px;
+  }
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.itemButton {
+  background-color: #d1d1d1;
+  margin-top: auto;
+  height: 42px;
+  border: 0px;
+  border-radius: 4px;
+  transition: all 0.35s;
+
+  &:hover {
+    background-color: #333;
+    color: #fff;
   }
 }
