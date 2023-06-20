@@ -15,7 +15,7 @@ function CarItem({ car }) {
             currencyDisplay: "narrowSymbol",
           }).format(car.price)}
         </p>
-        <button className={styles.itemButton}>Read more</button>
+        <button className='btn'>Read more</button>
       </div>
     </div>
   );

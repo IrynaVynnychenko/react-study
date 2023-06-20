@@ -1,12 +1,12 @@
-import { useMemo } from 'react';
+import { useState } from 'react';
 import CarItem from './car-item/CarItem'
-import {cars} from './cars.data.js'
+import {cars as carsData} from './cars.data.js'
+import CreateCarForm from './create-car-form/CreateCarForm.jsx'
 
 function Home() {
 
-  const filteredCars = useMemo(() => 
-    cars.filter(car => car.price > 20000), []
-  );
+  const [cars, setCars] = useState(carsData);
+  console.log(cars)
 
   return (
     <>
@@ -14,11 +14,14 @@ function Home() {
         <h1>
           Cars catalog
         </h1>
+        <CreateCarForm setCars={setCars} />
         <div className='wrapper-cards'>
-          {filteredCars.length ? filteredCars.map(car => (
-            <CarItem key={car.id} car={car}/>
-          ))
-           : <p className='wrapper-cards__empty'>There is no cars</p>
+          {cars.length ? (
+            cars.map(car => <CarItem key={car.id} car={car} />)
+          )
+           : (
+            <p className='wrapper-cards__empty'>There is no cars</p>
+           )
         }
         </div>
       </div>
