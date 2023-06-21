@@ -2,6 +2,10 @@
   margin: 10px auto 30px;
   display: flex;
   flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form input {
